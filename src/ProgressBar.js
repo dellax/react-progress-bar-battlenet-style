@@ -4,10 +4,7 @@ import '../style.css';
 export default class ProgressBar extends React.Component {
 	constructor(props) {
 		super(props);
-		let [orange, yellow, green] = [30, 55, 85];
-		if (props.colors) {
-			[orange, yellow, green] = props.colors;
-		}
+		let [orange, yellow, green] = props.colors;
 		this.colors = {orange, yellow, green};
 	}
 
@@ -53,3 +50,12 @@ export default class ProgressBar extends React.Component {
 		)
 	}
 }
+
+ProgressBar.propTypes = {
+  colors: React.PropTypes.arrayOf(React.PropTypes.number),
+  completed: React.PropTypes.number.isRequired
+};
+
+ProgressBar.defaultProps = {
+  colors: [30, 55, 85]
+};
