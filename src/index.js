@@ -1,6 +1,5 @@
 'use strict';
 
 // this should be the entry point to your library
-module.exports = {
-	ProgressBar: require('./ProgressBar')
-};
+module.exports = require('./ProgressBar.js');
+

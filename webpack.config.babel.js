@@ -22,8 +22,8 @@ const config = {
     demo: path.join(ROOT_PATH, 'demo'),
     tests: path.join(ROOT_PATH, 'tests')
   },
-  filename: 'boilerplate',
-  library: 'Boilerplate'
+  filename: 'main',
+  library: 'Reactprogressbar'
 };
 const CSS_PATHS = [
   config.paths.demo,
@@ -236,7 +236,7 @@ if (TARGET === 'test' || TARGET === 'test:tdd' || !TARGET) {
   })
 }
 
-const distCommon = {
+const distCommon = merge(demoCommon, {
   devtool: 'source-map',
   output: {
     path: config.paths.dist,
@@ -255,6 +255,10 @@ const distCommon = {
   module: {
     loaders: [
       {
+          test: /\.css$/,
+          loaders: ['style', 'css']
+      },
+      {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: config.paths.src
@@ -264,7 +268,7 @@ const distCommon = {
   plugins: [
     new SystemBellPlugin()
   ]
-};
+});
 
 if (TARGET === 'dist') {
   module.exports = merge(distCommon, {
