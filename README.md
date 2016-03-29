@@ -23,7 +23,8 @@ ReactDOM.render(<ProgressBar completed={30} />, container);
 **Optional props**   
 `colors={[orange,yellow,green]}`   
 default: `colors={[30, 55, 85]}`  
-Percentage value at which the progress bar changes to desired color
+Percentage value at which the progress bar changes to given color
+
 ```javascript
 import ProgressBar from 'react-progress-bar-battlenet-style';
 import ReactDOM from 'react-dom';
