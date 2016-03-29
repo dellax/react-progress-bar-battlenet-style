@@ -1,3 +1,19 @@
+body, html {
+  color: white;
+  padding: 20px 50px;
+  background: #131c23;
+  font-family: Roboto;
+}
+
+h1 {
+  font-weight: 900;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+h1 b {
+  font-weight: 100;
+}
 
 a {
   color: gray;

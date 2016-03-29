@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,700italic,700);
 .progress {
   font-size: 1.2em;
+  font-family: Roboto;
   height: 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 2px;
@@ -116,21 +117,5 @@
   100% {
     background-position: 150% center, right center, left center;
   }
-}
-body, html {
-  color: white;
-  padding: 20px 50px;
-  background: #131c23;
-  font-family: Roboto;
-}
-
-h1 {
-  font-weight: 900;
-  line-height: 1em;
-  margin: 0.5em 0;
-}
-
-h1 b {
-  font-weight: 100;
 }
 
