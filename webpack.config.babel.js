@@ -6,14 +6,13 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import SystemBellPlugin from 'system-bell-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
 import merge from 'webpack-merge';
-import React from 'react';
-import ReactDOM from 'react-dom/server';
+
 
 import renderJSX from './lib/render.jsx';
-import App from './demo/App.jsx';
+
 import pkg from './package.json';
 
-const RENDER_UNIVERSAL = true;
+
 const TARGET = process.env.npm_lifecycle_event;
 const ROOT_PATH = __dirname;
 const config = {
@@ -23,8 +22,8 @@ const config = {
     demo: path.join(ROOT_PATH, 'demo'),
     tests: path.join(ROOT_PATH, 'tests')
   },
-  filename: 'reactprogressbar',
-  library: 'Reactprogressbar'
+  filename: 'boilerplate',
+  library: 'Boilerplate'
 };
 const CSS_PATHS = [
   config.paths.demo,
@@ -35,8 +34,6 @@ const CSS_PATHS = [
   path.join(ROOT_PATH, 'node_modules/react-ghfork/gh-fork-ribbon.css')
 ];
 const STYLE_ENTRIES = [
-  'purecss',
-  'highlight.js/styles/github.css',
   'react-ghfork/gh-fork-ribbon.ie.css',
   'react-ghfork/gh-fork-ribbon.css',
   './demo/main.css',
@@ -272,8 +269,7 @@ const distCommon = {
 if (TARGET === 'dist') {
   module.exports = merge(distCommon, {
     output: {
-      filename: config.filename + '.js',
-      sourceMapFilename: '[file].map'
+      filename: config.filename + '.js'
     }
   });
 }
@@ -292,3 +288,4 @@ if (TARGET === 'dist:min') {
     ]
   });
 }
+
