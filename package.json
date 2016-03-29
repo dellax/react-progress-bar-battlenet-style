@@ -3,7 +3,7 @@
   "description": "Battle.net style progress bar for react",
   "author": "dellax",
   "user": "dellax",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start",
@@ -77,7 +77,7 @@
     "type": "git",
     "url": "https://github.com/dellax/react-progress-bar-battlenet-style.git"
   },
-  "homepage": "https://github.com/dellax/react-progress-bar-battlenet-style.git",
+  "homepage": "https://github.com/dellax/react-progress-bar-battlenet-style",
   "bugs": {
     "url": "https://github.com/dellax/react-progress-bar-battlenet-style/issues"
   },
